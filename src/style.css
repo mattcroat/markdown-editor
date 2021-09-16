@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+pre {
+  white-space: pre-line;
+}
+
+.markdown {
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(0 100% 98%);
+  background-color: hsl(200 20% 14%);
+  border: none;
+  outline: none;
+}
