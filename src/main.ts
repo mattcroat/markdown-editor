@@ -1,14 +1,25 @@
-import marked from './lib/marked'
-import { debounce } from './utils'
+import { commonmark } from '@milkdown/preset-commonmark'
+import { Editor, rootCtx } from '@milkdown/core'
+import { nord } from '@milkdown/theme-nord'
 
-const markdownElement = document.querySelector<HTMLTextAreaElement>(
-  '[data-markdown]'
-)!
+import { emoji } from '@milkdown/plugin-emoji'
+import { listener, listenerCtx } from '@milkdown/plugin-listener'
+import { slash } from '@milkdown/plugin-slash'
 
-function updateMarkdown(event: KeyboardEvent) {
-  const markdown = (event.target as HTMLPreElement).innerHTML
-  const parsedMarkdown = marked(markdown)
-  markdownElement.innerHTML = parsedMarkdown
-}
-
-markdownElement.addEventListener('keyup', debounce(updateMarkdown, 1000))
+Editor.make()
+  .config((ctx) => {
+    ctx.set(rootCtx, document.querySelector('#editor'))
+    ctx.set(listenerCtx, {
+      markdown: [
+        (getMarkdown) => {
+          // ...
+        },
+      ],
+    })
+  })
+  .use(nord)
+  .use(commonmark)
+  .use(emoji)
+  .use(listener)
+  .use(slash)
+  .create()

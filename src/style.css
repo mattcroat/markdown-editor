@@ -7,21 +7,21 @@
 html,
 body {
   height: 100%;
+  background-color: rgb(46, 52, 64);
+  overflow-x: hidden;
 }
 
-pre {
-  white-space: pre-line;
-}
+#editor .milkdown {
+  --neutral: 236, 239, 244;
+  --solid: 216, 222, 233;
+  --line: 67, 76, 94;
+  --background: 37, 41, 50;
+  --surface: 46, 52, 64;
+  --typography: 'Inter', sans-serif;
+  --code: 'Mononoki Nerd Font', monospace;
 
-.markdown {
-  height: 100%;
-  width: 100%;
-  padding: 2rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: hsl(0 100% 98%);
-  background-color: hsl(200 20% 14%);
-  border: none;
-  outline: none;
+  padding: 0 0;
+  margin: 0 auto;
+  max-width: 80ch;
+  box-shadow: none;
 }
