@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+  background-color: rgb(46, 52, 64);
+  overflow-x: hidden;
+}
+
+#editor .milkdown {
+  --neutral: 236, 239, 244;
+  --solid: 216, 222, 233;
+  --line: 67, 76, 94;
+  --background: 37, 41, 50;
+  --surface: 46, 52, 64;
+  --typography: 'Inter', sans-serif;
+  --code: 'Mononoki Nerd Font', monospace;
+
+  padding: 0 0;
+  margin: 0 auto;
+  max-width: 80ch;
+  box-shadow: none;
+}
+
+@layer base {
+  ::selection {
+    @apply bg-gray-800;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-1;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-800;
+  }
+
+  :focus {
+    outline: none;
+  }
+
+  .editor {
+    @apply text-gray-50;
+  }
+
+  .editor h1 {
+    @apply max-w-2xl pb-4 mx-auto mb-4 text-center md:pb-8 lg:text-6xl md:mb-8 lg:mb-8 lg:leading-tight font-black mt-8;
+  }
+
+  .editor h2 {
+    @apply mt-16 text-3xl font-bold lg:text-4xl;
+  }
+
+  .editor p {
+    @apply my-8 leading-loose text-lg md:text-xl text-gray-400;
+  }
+
+  .editor ul,
+  .editor ol {
+    @apply my-8 space-y-4 text-lg md:text-xl md:leading-loose;
+  }
+
+  .editor ul {
+    @apply list-disc list-inside;
+  }
+
+  .editor ol {
+    @apply list-decimal list-inside;
+  }
+
+  .editor li > p {
+    @apply inline-block m-0;
+  }
+
+  .editor a {
+    @apply relative before:absolute before:block before:w-full before:h-[2px] before:bottom-0 before:left-0 before:bg-yellow-400 before:scale-x-0 before:transition-transform hover:before:scale-x-100 text-gray-50 before:origin-left;
+  }
+
+  .editor blockquote {
+    @apply px-8 py-2 my-8 border-l-4 bg-gray-800 border-gray-50;
+  }
+
+  .editor .code-fence {
+    @apply rounded-lg bg-gray-800 my-8;
+  }
+
+  .editor .code-fence pre {
+    @apply p-0 text-base;
+  }
+}
