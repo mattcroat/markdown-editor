@@ -2,26 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --code: #ffffff;
+  --pre: #0e1e2a;
+  --tokenFunction: #e1722d;
+  --tokenKeyword: #00b3fa;
+  --tokenOperator: #ee7276;
+  --tokenPunctuation: #aac1d5;
+  --tokenString: #93e585;
+  --comment: #9aa1ac;
+}
+
 html,
 body {
   height: 100%;
-  background-color: rgb(46, 52, 64);
-  overflow-x: hidden;
-}
-
-#editor .milkdown {
-  --neutral: 236, 239, 244;
-  --solid: 216, 222, 233;
-  --line: 67, 76, 94;
-  --background: 37, 41, 50;
-  --surface: 46, 52, 64;
-  --typography: 'Inter', sans-serif;
-  --code: 'Mononoki Nerd Font', monospace;
-
-  padding: 0 0;
-  margin: 0 auto;
-  max-width: 80ch;
-  box-shadow: none;
+  background-color: #0e1e2a;
 }
 
 @layer base {
@@ -41,16 +36,8 @@ body {
     @apply bg-gray-800;
   }
 
-  :focus {
-    outline: none;
-  }
-
-  .editor {
-    @apply text-gray-50;
-  }
-
   .editor h1 {
-    @apply max-w-2xl pb-4 mx-auto mb-4 text-center md:pb-8 lg:text-6xl md:mb-8 lg:mb-8 lg:leading-tight font-black mt-8;
+    @apply max-w-2xl pb-4 mx-auto mt-8 mb-4 font-black text-center md:pb-8 lg:text-6xl md:mb-8 lg:mb-8 lg:leading-tight;
   }
 
   .editor h2 {
@@ -58,12 +45,16 @@ body {
   }
 
   .editor p {
-    @apply my-8 leading-loose text-lg md:text-xl text-gray-400;
+    @apply my-8 text-lg leading-loose md:text-xl;
   }
 
   .editor ul,
   .editor ol {
     @apply my-8 space-y-4 text-lg md:text-xl md:leading-loose;
+  }
+
+  .editor ul.code-fence_select {
+    @apply my-0;
   }
 
   .editor ul {
@@ -83,14 +74,69 @@ body {
   }
 
   .editor blockquote {
-    @apply px-8 py-2 my-8 border-l-4 bg-gray-800 border-gray-50;
+    @apply px-8 py-2 my-8 bg-gray-800 border-l-4 border-gray-50;
   }
 
   .editor .code-fence {
-    @apply rounded-lg bg-gray-800 my-8;
+    @apply p-0 my-8 text-base;
   }
 
   .editor .code-fence pre {
     @apply p-0 text-base;
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: var(--comment);
+  }
+
+  .token.punctuation {
+    color: var(--tokenPunctuation);
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    @apply text-red-400;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted {
+    color: var(--tokenString);
+  }
+
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string {
+    color: var(--tokenOperator);
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword {
+    color: var(--tokenKeyword);
+  }
+
+  .token.function,
+  .token.class-name {
+    color: var(--tokenFunction);
+  }
+
+  .token.regex,
+  .token.important,
+  .token.variable {
+    color: white;
   }
 }

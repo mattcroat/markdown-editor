@@ -1,0 +1,63 @@
+code[class*='language-'],
+pre[class*='language-'] {
+  @apply p-0 leading-relaxed bg-transparent text-code;
+}
+
+.remark-code-title {
+  @apply relative px-4 py-2 font-mono font-bold shadow-lg rounded-tl-md left-4 lg:left-0 rounded-tr-md -z-10 w-max bg-highlight text-primary;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  @apply text-comment;
+}
+
+.token.punctuation {
+  @apply text-tokenPunctuation;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  @apply text-red-400;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  @apply text-tokenString;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  @apply text-tokenOperator;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  @apply text-tokenKeyword;
+}
+
+.token.function,
+.token.class-name {
+  @apply text-tokenFunction;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  @apply text-highlight;
+}

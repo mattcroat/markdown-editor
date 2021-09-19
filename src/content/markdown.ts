@@ -16,7 +16,11 @@ export const markdown = `
 
   ## Code Fences
 
+  \`\`\`html
+  <h1>Hello, World</h1>
+  \`\`\`  
+
   \`\`\`js
-  console.log('Hello, World')
+  console.log('JavaScript')
   \`\`\`
-`.trim()
+`
