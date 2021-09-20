@@ -1,12 +1,12 @@
 import { getColor } from '../../utils'
 
 export const color = {
-  shadow: getColor('--dark'),
-  primary: getColor('--white'),
-  secondary: getColor('--darkblue'),
-  neutral: getColor('--lightblue'),
-  solid: getColor('--lightblue'),
-  line: getColor('--line'),
-  background: getColor('--blue'),
-  surface: getColor('--blue'),
+  shadow: getColor('--blue-5'),
+  primary: getColor('--white-2'),
+  secondary: getColor('--blue-3'),
+  neutral: getColor('--blue-5'),
+  solid: getColor('--blue-1'),
+  line: getColor('--blue-5'),
+  background: getColor('--blue-4'),
+  surface: getColor('--blue-1'),
 }

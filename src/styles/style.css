@@ -9,27 +9,27 @@
 }
 
 :root {
-  /* 🐺 Night Howl */
-  --blue: #0e1e2a;
-  --dark: #000000;
-  --darkblue: #112636;
-  --lightblue: #9bc1d4;
-  --white: #e0f1ff;
-  --line: #1c3c54;
+  /* 🐺 night howl */
+  --blue-1: #9bc1d4;
+  --blue-2: #1c3c54;
+  --blue-3: #112636;
+  --blue-4: #0e1e2a;
+  --blue-5: #0b1822;
+  --white-1: #ffffff;
+  --white-2: #e0f1ff;
 
-  /* 💄 Syntax Highlight */
-  --tokenFunction: #e1722d;
-  --tokenKeyword: #00b3fa;
-  --tokenOperator: #ee7276;
-  --tokenPunctuation: #aac1d5;
-  --tokenString: #93e585;
-  --tokenTag: #f87171;
-  --tokenRegex: #ffffff;
-  --comment: #9aa1ac;
+  /* 💄 syntax highlight */
+  --azure: #00b3fa;
+  --gray-1: #aac1d5;
+  --gray-2: #9aa1ac;
+  --green: #93e585;
+  --red-1: #f87171;
+  --red-2: #ee7276;
+  --red-3: #e1722d;
 }
 
 ::selection {
-  background-color: var(--lightblue);
+  background-color: var(--blue-4);
 }
 
 ::-webkit-scrollbar {
@@ -41,7 +41,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--lightblue);
+  background-color: var(--blue-4);
 }
 
 html,
@@ -55,14 +55,14 @@ body {
   margin: 0 auto;
   padding-bottom: 2rem;
   font-family: var(--typography);
-  color: var(--lightblue);
+  color: var(--blue-1);
 }
 
 .editor {
   outline: none;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .editor h1 {
@@ -94,25 +94,30 @@ body {
 }
 
 .editor a {
-  color: var(--white);
+  color: var(--white-1);
   text-decoration: underline;
 }
 
 .editor .blockquote {
-  background-color: var(--darkblue);
-  border-left: 2px solid var(--lightblue);
+  background-color: var(--blue-3);
+  border-left: 2px solid var(--blue-1);
   padding: 2rem;
 }
 
 .editor .code-fence {
   font-size: 1rem;
-  border-radius: 4px;
-  font-family: var(--code);
-  background-color: var(--darkblue);
+  border-radius: 10px;
+  background-color: var(--blue-3);
+  box-shadow: 6px 6px 0px var(--blue-5);
+}
+
+.editor .code-fence .code-fence_value {
+  border-radius: 10px;
 }
 
 .editor .code-fence pre {
   padding: 0;
+  color: var(--white-1);
 }
 
 .editor .code-fence code {
@@ -123,11 +128,11 @@ body {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: var(--comment);
+  color: var(--gray-2);
 }
 
 .token.punctuation {
-  color: var(--tokenPunctuation);
+  color: var(--gray-1);
 }
 
 .token.property,
@@ -137,7 +142,7 @@ body {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: var(--tokenTag);
+  color: var(--red-1);
 }
 
 .token.selector,
@@ -146,7 +151,7 @@ body {
 .token.char,
 .token.builtin,
 .token.inserted {
-  color: var(--tokenString);
+  color: var(--green);
 }
 
 .token.operator,
@@ -154,22 +159,22 @@ body {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: var(--tokenOperator);
+  color: var(--red-2);
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-  color: var(--tokenKeyword);
+  color: var(--azure);
 }
 
 .token.function,
 .token.class-name {
-  color: var(--tokenFunction);
+  color: var(--red-3);
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-  color: var(--tokenRegex);
+  color: var(--white-1);
 }

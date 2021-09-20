@@ -6,7 +6,7 @@ type Mixin = ThemePack['mixin']
 
 export const mixin: Mixin = ({ palette }) => ({
   shadow: () => css`
-    box-shadow: 0px 2px 2px ${palette('shadow', 0.2)};
+    box-shadow: 6px 6px 0px ${palette('shadow', 1)};
   `,
   border: () => css`
     border-style: solid;

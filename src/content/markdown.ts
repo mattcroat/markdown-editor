@@ -1,7 +1,13 @@
 export const markdown = `
-  # Heading
+  # Poet :writing_hand:
 
-  ## Secondary Heading
+  ## Table of Contents
+  - [Weights](#weights)
+  - [Quote](#quote)
+  - [List](#list)
+  - [Code Fences](#code-fences)
+
+  ## Weights
 
   normal **bold** _italic_
 
@@ -11,11 +17,8 @@ export const markdown = `
 
   ## List
 
-  - Milk
-  - Eggs
-
-  1. Milk
-  2. Eggs
+  - :cow: Milk
+  - :egg: Eggs
 
   ## Code Fences
 
