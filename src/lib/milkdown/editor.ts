@@ -1,5 +1,5 @@
 import { commonmark, codeFence } from '@milkdown/preset-commonmark'
-import { defaultValueCtx, Editor, rootCtx, themeFactory } from '@milkdown/core'
+import { defaultValueCtx, Editor, rootCtx } from '@milkdown/core'
 
 import { emoji } from '@milkdown/plugin-emoji'
 import { listener, listenerCtx } from '@milkdown/plugin-listener'
@@ -24,15 +24,15 @@ export function editor(markdown: string): void {
     })
     .use(nightHowl)
     .use(
-      commonmark.configure(codeFence, {
+      commonmark.headless().configure(codeFence, {
         headless: false,
-        languageList: ['css', 'html', 'js', 'shell', 'ts'],
+        languageList: ['css', 'html', 'js', 'json', 'shell', 'ts'],
       })
     )
-    .use(emoji)
     .use(listener)
     .use(slash)
     .use(tooltip)
     .use(prism)
+    .use(emoji)
     .create()
 }

@@ -14,6 +14,9 @@ export const markdown = `
   - Milk
   - Eggs
 
+  1. Milk
+  2. Eggs
+
   ## Code Fences
 
   \`\`\`html
