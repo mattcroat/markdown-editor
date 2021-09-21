@@ -124,6 +124,11 @@ body {
   font-family: var(--code);
 }
 
+/* slash commands */
+.editor .css-qxzvxm::before {
+  font-size: 1.2rem;
+}
+
 .token.comment,
 .token.prolog,
 .token.doctype,
