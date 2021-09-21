@@ -2,9 +2,10 @@ import { commonmark, codeFence } from '@milkdown/preset-commonmark'
 import { defaultValueCtx, Editor, rootCtx } from '@milkdown/core'
 
 import { emoji } from '@milkdown/plugin-emoji'
+import { history } from '@milkdown/plugin-history'
 import { listener, listenerCtx } from '@milkdown/plugin-listener'
-import { slash } from '@milkdown/plugin-slash'
 import { prism } from '@milkdown/plugin-prism'
+import { slash } from '@milkdown/plugin-slash'
 import { tooltip } from '@milkdown/plugin-tooltip'
 
 import { nightHowl } from './theme'
@@ -34,6 +35,7 @@ export function editor(placeholder: string): void {
     .use(listener)
     .use(slash)
     .use(tooltip)
+    .use(history)
     .use(prism)
     .use(emoji)
     .create()
