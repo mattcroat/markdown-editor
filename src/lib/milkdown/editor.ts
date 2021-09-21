@@ -8,19 +8,21 @@ import { prism } from '@milkdown/plugin-prism'
 import { tooltip } from '@milkdown/plugin-tooltip'
 
 import { nightHowl } from './theme'
+import { saveMarkdown } from '../../utils'
 
-export function editor(markdown: string): void {
+export function editor(placeholder: string): void {
   Editor.make()
     .config((ctx) => {
       ctx.set(rootCtx, document.querySelector('#editor'))
-      ctx.set(defaultValueCtx, markdown)
-      // ctx.set(listenerCtx, {
-      //   markdown: [
-      //     (getMarkdown) => {
-      //       console.log(getMarkdown())
-      //     },
-      //   ],
-      // })
+      ctx.set(defaultValueCtx, placeholder)
+      ctx.set(listenerCtx, {
+        markdown: [
+          (getMarkdown) => {
+            const markdown = getMarkdown()
+            saveMarkdown(markdown)
+          },
+        ],
+      })
     })
     .use(nightHowl)
     .use(

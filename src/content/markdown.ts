@@ -1,4 +1,4 @@
-export const markdown = `
+export const placeholder = `
   # Poet :writing_hand:
 
   ## Table of Contents

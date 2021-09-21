@@ -1,4 +1,7 @@
 import { editor } from './lib/milkdown/editor'
-import { markdown } from './content/markdown'
+import { placeholder } from './content/markdown'
+import { getMarkdown } from './utils'
 
-editor(markdown)
+const content = getMarkdown().length > 0 ? getMarkdown() : placeholder
+
+editor(content)
