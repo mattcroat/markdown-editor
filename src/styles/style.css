@@ -2,11 +2,19 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');
 
+/*
+  Reset
+*/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/*
+  Variables
+*/
 
 :root {
   /* 🐺 night howl */
@@ -28,6 +36,10 @@
   --red-3: #e1722d;
 }
 
+/*
+  General
+*/
+
 ::selection {
   background-color: var(--blue-4);
 }
@@ -48,6 +60,15 @@ html,
 body {
   height: 100%;
   background-color: rgba(var(--background), 1);
+}
+
+/*
+  Editor
+*/
+
+.ProseMirror {
+  /* fixes Firefox ignoring spaces */
+  white-space: pre-wrap;
 }
 
 .milkdown {
@@ -128,6 +149,10 @@ body {
 .editor .css-qxzvxm::before {
   font-size: 1.2rem;
 }
+
+/*
+  Syntax highlight
+*/
 
 .token.comment,
 .token.prolog,
