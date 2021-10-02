@@ -10,6 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: 1px solid hsla(0 100% 50% / 40%);
 }
 
 /*
@@ -41,7 +42,7 @@
 */
 
 ::selection {
-  background-color: var(--blue-4);
+  background-color: var(--blue-2);
 }
 
 ::-webkit-scrollbar {
@@ -126,6 +127,12 @@ body {
   padding: 2rem;
 }
 
+.editor .code-inline {
+  padding: 0.4rem;
+  border-radius: 4px;
+  background-color: var(--blue-5);
+}
+
 .editor .code-fence {
   font-size: 1rem;
   border-radius: 10px;
@@ -149,6 +156,10 @@ body {
 /* slash commands */
 .editor .css-qxzvxm::before {
   font-size: 1.2rem;
+}
+
+.css-10lnhm.tooltip-input {
+  width: auto;
 }
 
 /*
