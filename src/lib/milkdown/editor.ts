@@ -14,7 +14,7 @@ import { saveMarkdown } from '../../utils'
 export function editor(placeholder: string): void {
   Editor.make()
     .config((ctx) => {
-      ctx.set(rootCtx, document.querySelector('#editor'))
+      ctx.set(rootCtx, document.querySelector<HTMLDivElement>('[editor]'))
       ctx.set(defaultValueCtx, placeholder)
       ctx.set(listenerCtx, {
         markdown: [

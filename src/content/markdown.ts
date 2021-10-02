@@ -1,5 +1,5 @@
 export const placeholder = `
-  # Poet :writing_hand:
+  # Your Next Masterpiece Awaits :writing_hand:
 
   ## Table of Contents
   - [Weights](#weights)

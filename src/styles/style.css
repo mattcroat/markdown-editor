@@ -83,6 +83,7 @@ body {
   outline: none;
   display: flex;
   flex-direction: column;
+  /* todo: remove this for paragraph */
   gap: 3rem;
 }
 
@@ -148,6 +149,33 @@ body {
 /* slash commands */
 .editor .css-qxzvxm::before {
   font-size: 1.2rem;
+}
+
+/*
+  Toolbox
+*/
+
+.toolbox {
+  position: fixed;
+  top: 6%;
+  right: 4%;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.toolbox button {
+  padding: 1rem;
+  font-size: inherit;
+  background-color: var(--blue-2);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 2px 4px 0px var(--blue-5);
+}
+
+.toolbox button:active {
+  transform: scale(0.9);
+  box-shadow: none;
 }
 
 /*
